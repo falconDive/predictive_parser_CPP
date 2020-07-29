@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# checks and tests each test case and prints the actual vs the expected output
+for file in tests/*.txt; do
+	echo "Filename: "$file;
+	echo "Result: "
+	./parser < $file;
+	echo "Expected: "
+	cat $file.expected;
+	echo ""
+	done
